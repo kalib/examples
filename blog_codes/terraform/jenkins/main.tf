@@ -1,0 +1,20 @@
+module "vm_setup" {
+  source = "../modules/vm_setup"
+
+  project_name  = "${var.project_name}"
+  instance_tags = "${var.instance_tags}"
+  user_data     = "${var.user_data}"
+  i_from_port   = "${var.i_from_port}"
+  i_to_port     = "${var.i_to_port}"
+  i_ip_range    = "${var.i_ip_range}"
+  e_from_port   = "${var.e_from_port}"
+  e_to_port     = "${var.e_to_port}"
+  e_ip_range    = "${var.e_ip_range}"
+  vpc_ip_range  = "${var.vpc_ip_range}"
+  gw_tags       = "${var.gw_tags}"
+  route_ips     = "${var.route_ips}"
+  route_tags    = "${var.route_tags}"
+  sg_tags       = "${var.sg_tags}"
+  vpc_tags      = "${var.vpc_tags}"
+  subnet_tags   = "${var.subnet_tags}"
+}
